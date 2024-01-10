@@ -11,7 +11,6 @@ void setup() {
 }
 
 void draw() {
-    //左側の描画
     left.beginDraw();
     left.camera(
         eyeDistance, 0, 500
@@ -20,7 +19,6 @@ void draw() {
     drawScene(left);
     left.endDraw();
     
-    //右側の描画
     right.beginDraw();
     right.camera(
         - eyeDistance, 0, 500
@@ -29,7 +27,6 @@ void draw() {
     drawScene(right);
     right.endDraw();
     
-    //メイン画面に描画
     image(left, 0, 0);
     image(right, w, 0);
 }
