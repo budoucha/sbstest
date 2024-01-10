@@ -35,6 +35,8 @@ void drawScene(PGraphics pg) {
     pg.background(0);
     pg.strokeWeight(5);
     
+    pg.perspective(radians(46), float(w) / h, 100, 1000);
+    
     //Central Emerald
     pg.stroke(63, 255, 127);
     pg.fill(63, 255, 127, 32);
@@ -82,7 +84,7 @@ void drawScene(PGraphics pg) {
     pg.fill(255, 63, 127, 32);
     pg.pushMatrix();
     pg.rotateY(radians(90));
-    pg.rotateX(radians( - 12.5));
+    pg.rotateX(radians( -12.5));
     pg.rotateY(radians(frameCount * 1.5));
     pg.translate(200, 0, 0);
     pg.rotateZ(radians(45));
