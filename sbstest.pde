@@ -38,9 +38,9 @@ void drawScene(PGraphics pg) {
     
     pg.strokeWeight(2);
     
-    pg.pushMatrix();
     pg.stroke(64,255,128);
     pg.fill(64,255,128,32);
+    pg.pushMatrix();
     pg.rotateY(radians(frameCount));
     pg.box(250);
     pg.popMatrix();
