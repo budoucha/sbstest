@@ -4,7 +4,7 @@ int w = 1920;
 int h = 1080;
 
 void setup() {
-    size(3840,1080,P2D);
+    fullScreen(P2D);
     left = createGraphics(1920, 1080, P3D);
     right = createGraphics(1920, 1080, P3D);
 }
