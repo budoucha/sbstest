@@ -58,9 +58,9 @@ void drawScene(PGraphics pg) {
     pg.stroke(127, 63, 255);
     pg.fill(127, 63, 255, 32);
     pg.pushMatrix();
-    pg.rotateY(radians(frameCount / 2));
+    pg.rotateY(radians(frameCount / 2.0));
     pg.translate(250, 0, 0);
-    pg.rotateX(radians(frameCount / 2));
+    pg.rotateX(radians(frameCount / 2.0));
     pg.rotateZ(radians(45));
     pg.box(80);
     pg.popMatrix();
@@ -70,7 +70,7 @@ void drawScene(PGraphics pg) {
     pg.fill(63, 127, 255, 32);
     pg.pushMatrix();
     pg.rotateY(radians(180));
-    pg.rotateY(radians(frameCount / 3));
+    pg.rotateY(radians(frameCount / 3.0));
     pg.translate(250, 0, 0);
     pg.rotateX(radians(45));
     pg.rotateZ(radians(45));
