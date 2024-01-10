@@ -9,7 +9,7 @@ void setup() {
     right = createGraphics(1920, 1080, P3D);
 }
 
-void draw() {    
+void draw() {
     //左側の描画
     left.beginDraw();
     left.camera(
