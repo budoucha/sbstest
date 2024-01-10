@@ -7,6 +7,7 @@ void setup() {
     fullScreen(P2D);
     left = createGraphics(1920, 1080, P3D);
     right = createGraphics(1920, 1080, P3D);
+    background(0);
 }
 
 void draw() {
