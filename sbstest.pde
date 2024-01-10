@@ -41,7 +41,7 @@ void drawScene(PGraphics pg) {
     pg.pushMatrix();
     pg.rotateY(radians(frameCount));
     pg.rotateZ(radians(frameCount));
-    pg.box(200);
+    pg.box(160);
     pg.popMatrix();
     
     //Central Orange
@@ -51,7 +51,7 @@ void drawScene(PGraphics pg) {
     pg.rotateX(radians(45));
     pg.rotateY(radians(45));
     pg.rotateY( -radians(frameCount));
-    pg.box(250);
+    pg.box(200);
     pg.popMatrix();
     
     //Satelite Violet
@@ -59,10 +59,10 @@ void drawScene(PGraphics pg) {
     pg.fill(127, 63, 255, 32);
     pg.pushMatrix();
     pg.rotateY(radians(frameCount / 2.0));
-    pg.translate(250, 0, 0);
+    pg.translate(180, 0, 0);
     pg.rotateX(radians(frameCount / 2.0));
     pg.rotateZ(radians(45));
-    pg.box(80);
+    pg.box(50);
     pg.popMatrix();
     
     //Satelite Azure
@@ -71,10 +71,10 @@ void drawScene(PGraphics pg) {
     pg.pushMatrix();
     pg.rotateY(radians(180));
     pg.rotateY(radians(frameCount / 3.0));
-    pg.translate(250, 0, 0);
+    pg.translate(240, 0, 0);
     pg.rotateX(radians(45));
     pg.rotateZ(radians(45));
-    pg.box(100);
+    pg.box(80);
     pg.popMatrix();
     
     //Satelite Pink
@@ -82,6 +82,7 @@ void drawScene(PGraphics pg) {
     pg.fill(255, 63, 127, 32);
     pg.pushMatrix();
     pg.rotateY(radians(90));
+    pg.rotateX(radians( - 12.5));
     pg.rotateY(radians(frameCount * 1.5));
     pg.translate(200, 0, 0);
     pg.rotateZ(radians(45));
@@ -94,6 +95,7 @@ void drawScene(PGraphics pg) {
     pg.fill(127, 255, 63, 32);
     pg.pushMatrix();
     pg.rotateY(radians(45));
+    pg.rotateX(radians(28));
     pg.rotateY(radians(frameCount * 1.8));
     pg.translate(200, 0, 0);
     pg.rotateZ(radians(45));
