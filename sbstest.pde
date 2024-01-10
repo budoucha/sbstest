@@ -33,8 +33,7 @@ void draw() {
 
 void drawScene(PGraphics pg) {
     pg.background(0);
-    
-    pg.strokeWeight(2);
+    pg.strokeWeight(5);
     
     //Central Emerald
     pg.stroke(63, 255, 127);
