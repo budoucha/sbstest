@@ -13,7 +13,7 @@ void setup() {
 void draw() {
     left.beginDraw();
     left.camera(
-        eyeDistance, 0, 500
+        - eyeDistance, 0, 500
         , 0, 0, 0,
         0, 1, 0);
     drawScene(left);
@@ -21,7 +21,7 @@ void draw() {
     
     right.beginDraw();
     right.camera(
-        - eyeDistance, 0, 500
+        eyeDistance, 0, 500
         , 0, 0, 0,
         0, 1, 0);
     drawScene(right);
