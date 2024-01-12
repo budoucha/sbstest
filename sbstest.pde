@@ -2,6 +2,8 @@ PGraphics left, right;
 int eyeDistance = 50;
 int w = 1920;
 int h = 1080;
+float aspectRatio = float(w)/h;
+float fovy = 2*atan(tan(radians(46)/2)/aspectRatio);
 
 void setup() {
     fullScreen(P2D);
@@ -33,10 +35,10 @@ void draw() {
 
 void drawScene(PGraphics pg) {
     pg.background(0);
-    pg.perspective(radians(23), float(w) / h, 400, 1600);
-    
     pg.strokeWeight(8);
-    
+
+    pg.perspective(fovy, aspectRatio, 400, 1600);
+
     //Central Emerald
     pg.stroke(63, 255, 127);
     pg.fill(63, 255, 127, 32);
