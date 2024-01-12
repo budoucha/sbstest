@@ -63,10 +63,10 @@ void drawScene(PGraphics pg) {
     pg.fill(127, 63, 255, 32);
     pg.pushMatrix();
     pg.rotateY(radians(frameCount / 2.0));
-    pg.translate(180, 0, 0);
+    pg.translate(200, 0, 0);
     pg.rotateX(radians(frameCount / 2.0));
     pg.rotateZ(radians(45));
-    pg.box(40);
+    pg.box(45);
     pg.popMatrix();
     
     //Satelite Azure
@@ -75,10 +75,10 @@ void drawScene(PGraphics pg) {
     pg.pushMatrix();
     pg.rotateY(radians(180));
     pg.rotateY(radians(frameCount / 3.0));
-    pg.translate(280, 0, 0);
+    pg.translate(320, 0, 0);
     pg.rotateX(radians(45));
     pg.rotateZ(radians(45));
-    pg.box(60);
+    pg.box(80);
     pg.popMatrix();
     
     //Satelite Pink
@@ -104,6 +104,6 @@ void drawScene(PGraphics pg) {
     pg.translate(110, 0, 0);
     pg.rotateZ(radians(45));
     pg.rotateY(radians(frameCount * 2));
-    pg.box(20);
+    pg.box(25);
     pg.popMatrix();
 }
