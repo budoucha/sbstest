@@ -13,7 +13,7 @@ void setup() {
 void draw() {
     left.beginDraw();
     left.camera(
-        - eyeDistance, 0, 500,
+        - eyeDistance, 0, 1000,
         0, 0, 0,
         0, 1, 0);
     drawScene(left);
@@ -21,7 +21,7 @@ void draw() {
     
     right.beginDraw();
     right.camera(
-        eyeDistance, 0, 500,
+        eyeDistance, 0, 1000,
         0, 0, 0,
         0, 1, 0);
     drawScene(right);
@@ -33,9 +33,9 @@ void draw() {
 
 void drawScene(PGraphics pg) {
     pg.background(0);
-    pg.strokeWeight(5);
+    pg.perspective(radians(46), float(w) / h, 100, 1600);
     
-    pg.perspective(radians(46), float(w) / h, 100, 1000);
+    pg.strokeWeight(8);
     
     //Central Emerald
     pg.stroke(63, 255, 127);
@@ -43,7 +43,7 @@ void drawScene(PGraphics pg) {
     pg.pushMatrix();
     pg.rotateY(radians(frameCount));
     pg.rotateZ(radians(frameCount));
-    pg.box(160);
+    pg.box(200);
     pg.popMatrix();
     
     //Central Orange
@@ -53,7 +53,7 @@ void drawScene(PGraphics pg) {
     pg.rotateX(radians(45));
     pg.rotateY(radians(45));
     pg.rotateY( -radians(frameCount));
-    pg.box(200);
+    pg.box(240);
     pg.popMatrix();
     
     //Satelite Violet
@@ -61,10 +61,10 @@ void drawScene(PGraphics pg) {
     pg.fill(127, 63, 255, 32);
     pg.pushMatrix();
     pg.rotateY(radians(frameCount / 2.0));
-    pg.translate(180, 0, 0);
+    pg.translate(340, 0, 0);
     pg.rotateX(radians(frameCount / 2.0));
     pg.rotateZ(radians(45));
-    pg.box(50);
+    pg.box(80);
     pg.popMatrix();
     
     //Satelite Azure
@@ -73,10 +73,10 @@ void drawScene(PGraphics pg) {
     pg.pushMatrix();
     pg.rotateY(radians(180));
     pg.rotateY(radians(frameCount / 3.0));
-    pg.translate(240, 0, 0);
+    pg.translate(500, 0, 0);
     pg.rotateX(radians(45));
     pg.rotateZ(radians(45));
-    pg.box(80);
+    pg.box(120);
     pg.popMatrix();
     
     //Satelite Pink
@@ -86,7 +86,7 @@ void drawScene(PGraphics pg) {
     pg.rotateY(radians(90));
     pg.rotateX(radians( -12.5));
     pg.rotateY(radians(frameCount * 1.5));
-    pg.translate(200, 0, 0);
+    pg.translate(240, 0, 0);
     pg.rotateZ(radians(45));
     pg.rotateY(radians(frameCount * 2));
     pg.box(50);
@@ -99,7 +99,7 @@ void drawScene(PGraphics pg) {
     pg.rotateY(radians(45));
     pg.rotateX(radians(28));
     pg.rotateY(radians(frameCount * 1.8));
-    pg.translate(200, 0, 0);
+    pg.translate(220, 0, 0);
     pg.rotateZ(radians(45));
     pg.rotateY(radians(frameCount * 2));
     pg.box(40);
